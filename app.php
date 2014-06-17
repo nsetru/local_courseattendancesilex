@@ -40,10 +40,12 @@ $app->get('/', function() use ($app){
     $PAGE->set_url($app['url_generator']->generate('enrolledcourses'));
     require_login();
 
-    echo $OUTPUT->header();
+    /*echo $OUTPUT->header();
     $outputtmp = '<h3>hello<h3>';
     echo $OUTPUT->footer();
-    return $outputtmp;
+    return $outputtmp;*/
+    //model to get enrolled courses for current user
+    return $app['twig']->render('enrolled_courses.twig');
 })->bind('enrolledcourses');
 
 return $app;

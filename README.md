@@ -5,6 +5,7 @@ Description:
 The plugin uses php microframework- Silex(http://silex.sensiolabs.org/) and templating engine- Twig(http://twig.sensiolabs.org/)
 
 **************** Silex *****************************
+
 Install Silex on Windows
 - Download Silex(.zip or .tgz)from here - http://silex.sensiolabs.org/download
 - Copy /silex/vendor directory into $CFG->dirroot/
@@ -16,7 +17,10 @@ Install Silex on Windows
 ===============
 
 ***************************************************
+
+
 ************* Twig **********************************
+http://twig.sensiolabs.org/doc/installation.html
 
 Install Twig on Windows with XAMPP
 - http://twig.sensiolabs.org/doc/installation.html
