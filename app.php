@@ -36,9 +36,10 @@ $app->get('/', function() use ($app){
     //return 'Hello';
     global $PAGE, $OUTPUT;
     $PAGE->set_context(context_system::instance());
-    require_login();
     $PAGE->set_pagelayout('standard');
     $PAGE->set_url($app['url_generator']->generate('enrolledcourses'));
+    require_login();
+
     echo $OUTPUT->header();
     $outputtmp = '<h3>hello<h3>';
     echo $OUTPUT->footer();
