@@ -10,11 +10,11 @@ Install Silex on Windows
 - Download Silex(.zip or .tgz)from here - http://silex.sensiolabs.org/download
 - Copy /silex/vendor directory into $CFG->dirroot/
 - Edit $CFG->dirroot/composer.json as below,
-===============
+
 {"require": {
         "silex/silex": "~1.2",
 }}            
-===============
+
 
 ***************************************************
 
