@@ -27,8 +27,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     )
 ));
 
-//3. Define required Twig library functions
+//3. require Twig library functions
 require dirname(__FILE__) . '/twiglib.php';
+require_once dirname(__FILE__) . '/models/courseattendance.php';
 
 //4. -- Implement all actions --//
 //unrestricted route showing all courses
@@ -45,6 +46,9 @@ $app->get('/', function() use ($app){
     echo $OUTPUT->footer();
     return $outputtmp;*/
     //model to get enrolled courses for current user
+    $model = new courseattendance();
+    $courses = $model->get_enrolled_courses();
+
     return $app['twig']->render('enrolled_courses.twig');
 })->bind('enrolledcourses');
 
